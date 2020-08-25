@@ -2,7 +2,7 @@ import React from "react";
 import { Container, Row, Col, Card, Table } from "reactstrap";
 import separaterIcon from 'src/assets/images/icons/chevron.svg';
 import axios from "axios";
-import { api_get_singleValidators, api_get_singleValidatorsDelegator } from 'src/utils/Utlity';
+import { api_get_singleValidators, api_get_singleValidatorsDelegation } from 'src/utils/Utlity';
 import { useRouteMatch, useHistory, Link } from 'react-router-dom';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 function durationToDisplay(millisec) {
@@ -97,12 +97,12 @@ function CheaterDetail() {
       });
     axios({
       method: 'get',
-      url: `${api_get_singleValidatorsDelegator}${stakeId}?verbosity=2`,
+      url: `${api_get_singleValidatorsDelegation}${stakeId}?verbosity=2`,
     })
       .then(function (response) {
-        //console.log(response.data.data.delegators);
-        setdeligatorDataCount(response.data.data.delegators.length)
-        setDeligatorData(response.data.data.delegators);
+        //console.log(response.data.data.delegations);
+        setdeligatorDataCount(response.data.data.delegations.length)
+        setDeligatorData(response.data.data.delegations);
       }).catch(function (error) {
         console.log(error.message);
       });
