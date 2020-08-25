@@ -7,4 +7,4 @@ export const api_get_singleTransaction = `https://api.fantom.network/api/v1/get-
 export const api_get_singleValidators = `https://api.fantom.network/api/v1/staker/id/`;
 export const api_get_singleValidatorsDelegation = `https://api.fantom.network/api/v1/delegation/staker/`;
 export const api_get_address = `https://api.fantom.network/api/v1/get-account?address=`;
-export const api_get_delegation = `https://api.fantom.network/api/v1/delegation/address/`;
+export const api_get_delegations = `https://api.fantom.network/api/v1/delegation/address/`;
