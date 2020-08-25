@@ -45,7 +45,7 @@ function AssetsPage() {
                 .then(function (response) {
                     // console.log(response.data.data.account);
                     console.log(response.data.data.epochNumber)
-                    const web3 = new Web3(new Web3.providers.HttpProvider("https://rpc.fantom.network/"));
+                    const web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:18545"));
                     const sfc = new web3.eth.Contract(abi, '0xfc00face00000000000000000000000000000000');
                       sfc.methods
                         .calcDelegationRewards(addressid, 1, response.data.data.epochNumber)
